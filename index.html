@@ -99,7 +99,7 @@ function $(id) { return document.getElementById(id); }
 function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
 var IN_GAS = typeof google !== 'undefined' && google.script && google.script.run;
-var API_URL = '';
+var API_URL = 'https://script.google.com/macros/s/AKfycbzsCZmTrrvo3UcHQTHkH4ucBlEsnz2fgYF8_AfSGkpBZsB_9ehsrrns5R1Rq2E5W4sM/exec';
 try { API_URL = new URLSearchParams(location.search).get('api') || localStorage.getItem('api_url') || ''; } catch (e) {}
 
 function call(action, p) {
